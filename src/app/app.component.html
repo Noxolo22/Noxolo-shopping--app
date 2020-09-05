@@ -1,0 +1,23 @@
+
+  
+  
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        
+        <a class="nav-item nav-link" routerLink="/">My Store</a>
+        <a class="nav-item nav-link" [routerLink]="['/cart']" ><img style="width: 100px; height: 100px;" src="https://png.pngtree.com/element_our/20190531/ourlarge/pngtree-shopping-cart-convenient-icon-image_1287807.jpg" alt="">Cart</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+
+</nav>
+
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-xs-6">
+                <alert></alert>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
